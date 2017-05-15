@@ -1,8 +1,8 @@
 -
-#ZCW-MicroLabs-ExceptionsAndLogging
+# ZCW-MicroLabs-ExceptionsAndLogging
 
 -
-#PhoneNumberFactory
+# PhoneNumberFactory
 * **Purpose** - to demonstrate basic exception handling and logging.
 * **Objective** - to implement a `PhoneNumberFactory` class that generates `PhoneNumber` objects.
 * The `PhoneNumber` class is a container for a `String` representation of a respective phone number.
@@ -23,7 +23,7 @@ String phoneLineCode = phoneNumber.getPhoneLineCode();
 
 
 -
-#Part 1; Modify `createPhoneNumber`
+# Part 1; Modify `createPhoneNumber`
 * Upon instantiating a new `PhoneNumber` object, it is possible to receive a `InvalidPhoneNumberFormatException` if the `String` passed into the `PhoneNumber` constructor does not fit the format `(###)-###-####`.<br>
 * `InvalidPhoneNumberFormatException` extends `IOException`, which is a `checked exception`.<br>
 * Modify the `createPhoneNumber` method so that it throws any resulting `InvalidPhoneNumberFormatException`.
@@ -32,7 +32,7 @@ String phoneLineCode = phoneNumber.getPhoneLineCode();
 
 
 -
-#Part 2; Implement `createPhoneNumberSafely`
+# Part 2; Implement `createPhoneNumberSafely`
 * Using the `createPhoneNumber` method from `Part 1`, define the `createPhoneNumberSafely` method such that the input parameters, `areaCode`, `centralOfficeCode`, `phoneLineCode` are concatenated to create a `String` representation of the respective phone number.
 * Use this `String` object to construct a new instance of `PhoneNumber` and return it.
 * If the concatentation of the input parameters yields a `String` whose value does not match the format `(###)-###-####`, then our `PhoneNumber` will throw a `InvalidPhoneNumberFormatException`.
@@ -40,17 +40,17 @@ String phoneLineCode = phoneNumber.getPhoneLineCode();
 
 
 -
-#Part 3; Implement `createRandomPhoneNumber`
+# Part 3; Implement `createRandomPhoneNumber`
 * Using the `RandomNumberFactory`, generate a random `Area Code`, `Central Office Code`, and `Phone Line Code`. Pass these values as arguments of the `createPhoneNumberSafely` method from `Part 2` and return the resulting `PhoneNumber` object.
 
 -
-#Part 4; Implement `createRandomPhoneNumberArray`
+# Part 4; Implement `createRandomPhoneNumberArray`
 * Using the `createRandomPhoneNumber` from `Part 3`, generate an array of `PhoneNumber` objects, whose length reflects the input argument.
 	* For example `createRandomPhoneNumber(5)` should return an array of 5 `PhoneNumber` objects.
 
 
 -
-#Part 5; Add logging
+# Part 5; Add logging
 * Add logging to the `createPhoneNumber` method from `Part 1`, which logs the message
 	* `"Attempting to create a new PhoneNumber object with a value of (###)-###-####`
 	* where `(###)-###-####` will be replaced with the respective input parameter.
@@ -60,5 +60,5 @@ String phoneLineCode = phoneNumber.getPhoneLineCode();
 	* Where `(###)-###-####` will be replaced with the respective input parameter.
 
 	
-#Part 6; Ensure all test cases pass
+# Part 6; Ensure all test cases pass
 * Yeah this header says all that is needed...
