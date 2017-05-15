@@ -1,5 +1,4 @@
 -
--
 #ZCW-MicroLabs-ExceptionsAndLogging
 
 -
@@ -10,7 +9,7 @@
 * Note: Phone numbers are a composite of 3 affixes; `Area Code`, `Central Office Code`, and `Phone Line Code`.
 	* `Area Code`  - the first 3 numeric values
 	* `Central Office Code` - the 4th, 5th, and 6th numeric values.
-	* `Phone Line Code` - the last 3 numeric values. 
+	* `Phone Line Code` - the last 4 numeric values. 
 
 * Below is a sample *instantation of* and *invokation on* `PhoneNumber`.
 	
