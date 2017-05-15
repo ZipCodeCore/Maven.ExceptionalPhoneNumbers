@@ -1,7 +1,7 @@
--
+
 # ZCW-MicroLabs-ExceptionsAndLogging
 
--
+
 # PhoneNumberFactory
 * **Purpose** - to demonstrate basic exception handling and logging.
 * **Objective** - to implement a `PhoneNumberFactory` class that generates `PhoneNumber` objects.
@@ -22,7 +22,6 @@ String phoneLineCode = phoneNumber.getPhoneLineCode();
 ```
 
 
--
 # Part 1; Modify `createPhoneNumber`
 * Upon instantiating a new `PhoneNumber` object, it is possible to receive a `InvalidPhoneNumberFormatException` if the `String` passed into the `PhoneNumber` constructor does not fit the format `(###)-###-####`.<br>
 * `InvalidPhoneNumberFormatException` extends `IOException`, which is a `checked exception`.<br>
@@ -31,7 +30,6 @@ String phoneLineCode = phoneNumber.getPhoneLineCode();
 
 
 
--
 # Part 2; Implement `createPhoneNumberSafely`
 * Using the `createPhoneNumber` method from `Part 1`, define the `createPhoneNumberSafely` method such that the input parameters, `areaCode`, `centralOfficeCode`, `phoneLineCode` are concatenated to create a `String` representation of the respective phone number.
 * Use this `String` object to construct a new instance of `PhoneNumber` and return it.
@@ -39,17 +37,15 @@ String phoneLineCode = phoneNumber.getPhoneLineCode();
 * If a `InvalidPhoneNumberFormatException` is thrown within this method, catch it and return `null`.
 
 
--
 # Part 3; Implement `createRandomPhoneNumber`
 * Using the `RandomNumberFactory`, generate a random `Area Code`, `Central Office Code`, and `Phone Line Code`. Pass these values as arguments of the `createPhoneNumberSafely` method from `Part 2` and return the resulting `PhoneNumber` object.
 
--
+
 # Part 4; Implement `createRandomPhoneNumberArray`
 * Using the `createRandomPhoneNumber` from `Part 3`, generate an array of `PhoneNumber` objects, whose length reflects the input argument.
 	* For example `createRandomPhoneNumber(5)` should return an array of 5 `PhoneNumber` objects.
 
 
--
 # Part 5; Add logging
 * Add logging to the `createPhoneNumber` method from `Part 1`, which logs the message
 	* `"Attempting to create a new PhoneNumber object with a value of (###)-###-####`
