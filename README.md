@@ -14,7 +14,7 @@
 * Below is a sample *instantation of* and *invokation on* `PhoneNumber`.
 	
 ```Java
-String stringRepresentation = "(302)-312-5555)";
+String stringRepresentation = "(302)-312-5555";
 PhoneNumber phoneNumber = new PhoneNumber(stringRepresentation);
 String areaCode = phoneNumber.getAreaCode();
 String centralOfficeCode = phoneNumber.getCentralOfficeCode();
