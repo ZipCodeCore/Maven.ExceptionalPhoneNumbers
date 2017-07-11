@@ -1,15 +1,15 @@
 package com.zipcodewilmington.phone;
 
+import com.sun.javafx.binding.Logging;
 import com.zipcodewilmington.exceptions.InvalidPhoneNumberFormatException;
-import com.zipcodewilmington.tools.RandomNumberFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import java.util.logging.Logger;
 
 /**
  * Created by leon on 5/1/17.
  */
 public final class PhoneNumberFactory {
-    private static final Logger logger = LoggerFactory.getLogger(PhoneNumberFactory.class);
+    private static final Logger logger = Logger.getGlobal();
 
     private PhoneNumberFactory() {
         /** This constructor is private
