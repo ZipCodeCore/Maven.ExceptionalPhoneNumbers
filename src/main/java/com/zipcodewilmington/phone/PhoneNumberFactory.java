@@ -1,6 +1,5 @@
 package com.zipcodewilmington.phone;
 
-import com.sun.javafx.binding.Logging;
 import com.zipcodewilmington.exceptions.InvalidPhoneNumberFormatException;
 
 import java.util.logging.Logger;
