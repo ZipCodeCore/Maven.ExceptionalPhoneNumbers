@@ -3,6 +3,7 @@
 
 
 # PhoneNumberFactory
+* **Lab Author** - Leon Hunter
 * **Purpose** - to demonstrate basic exception handling and logging.
 * **Objective** - to implement a `PhoneNumberFactory` class that generates `PhoneNumber` objects.
 * The `PhoneNumber` class is a container for a `String` representation of a respective phone number.
