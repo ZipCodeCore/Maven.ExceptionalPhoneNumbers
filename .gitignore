@@ -113,3 +113,5 @@ Temporary Items
 
 #maven build target
 target/
+
+*.log
