@@ -75,7 +75,7 @@ public final class PhoneNumberFactory {
      */ // TODO - Add throws statement to method signature
     public static PhoneNumber createPhoneNumber(String phoneNumberString) throws InvalidPhoneNumberFormatException {
 
-//        logger.info("Attempting to create a new PhoneNumber object with a value of" + phoneNumberString);
+     logger.info("Attempting to create a new PhoneNumber object with a value of" + phoneNumberString);
         PhoneNumber phoneNumber = new PhoneNumber(phoneNumberString);
         return phoneNumber;
 
