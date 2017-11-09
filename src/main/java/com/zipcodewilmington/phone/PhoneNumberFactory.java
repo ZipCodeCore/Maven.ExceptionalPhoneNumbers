@@ -63,13 +63,8 @@ public final class PhoneNumberFactory {
      * @throws InvalidPhoneNumberFormatException - thrown if phoneNumberString does not match acceptable format
      */ // TODO - Add throws statement to method signature
     public static PhoneNumber createPhoneNumber(String phoneNumberString) throws InvalidPhoneNumberFormatException {
+        PhoneNumber phoneNumber = new PhoneNumber(phoneNumberString);
+        return phoneNumber;
 
-        try {
-            assert (true):"Attempting to create a new PhoneNumber object with a value of "+phoneNumberString;
-            PhoneNumber phoneNumber = new PhoneNumber(phoneNumberString);
-            return phoneNumber;
-        } catch (InvalidPhoneNumberFormatException e) {
-            throw new InvalidPhoneNumberFormatException();
-        }
     }
 }
