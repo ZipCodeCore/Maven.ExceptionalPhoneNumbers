@@ -52,7 +52,7 @@ public final class PhoneNumberFactory {
         try {
             return createPhoneNumber(safePhoneNumber);
         } catch (InvalidPhoneNumberFormatException ipnfe) {
-            String message = String.format("(%d)-%d-%d is not a valid phone number", areaCode, centralOfficeCode, phoneLineCode);
+            String message = String.format("%s is not a valid phone number", safePhoneNumber);
             logger.log(Level.WARNING, message);
             return null;
         }
