@@ -52,10 +52,8 @@ public final class PhoneNumberFactory {
         PhoneNumber safeNumber = null;
         try {
             safeNumber = PhoneNumberFactory.createPhoneNumber(phoneNumber);
-            logger.log(Level.FINE, phoneNumber + " is not a valid phone number");
-
         } catch (InvalidPhoneNumberFormatException e) {
-
+            logger.log(Level.FINE, phoneNumber + " is not a valid phone number");
             e.printStackTrace();
         }
         return safeNumber;
