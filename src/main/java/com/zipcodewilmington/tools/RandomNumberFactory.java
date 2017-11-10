@@ -7,6 +7,7 @@ import java.util.*;
  */
 
 public abstract class RandomNumberFactory {
+
     private static final Random random = new Random();
 
     /** @return a random float between the specified min and max numeric range */
