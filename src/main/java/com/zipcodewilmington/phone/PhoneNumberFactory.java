@@ -51,7 +51,7 @@ public final class PhoneNumberFactory {
         try{
             return createPhoneNumber(phoneNumberString);
         }catch (InvalidPhoneNumberFormatException e){
-            Logger.getGlobal().info(phoneNumberString+ " is not a valid phone number");
+            logger.info(phoneNumberString+ " is not a valid phone number");
             return null;
         }
 
@@ -63,7 +63,7 @@ public final class PhoneNumberFactory {
      * @throws InvalidPhoneNumberFormatException - thrown if phoneNumberString does not match acceptable format
      */ // TODO - Add throws statement to method signature
     public static PhoneNumber createPhoneNumber(String phoneNumberString) throws InvalidPhoneNumberFormatException {
-        Logger.getGlobal().info("Attempting to create a new PhoneNumber object with a value of "+phoneNumberString);
+        logger.info("Attempting to create a new PhoneNumber object with a value of "+phoneNumberString);
         PhoneNumber phoneNumber = new PhoneNumber(phoneNumberString);
         return phoneNumber;
 
