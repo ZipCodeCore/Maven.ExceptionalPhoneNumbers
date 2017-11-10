@@ -52,10 +52,12 @@ public final class PhoneNumberFactory {
         PhoneNumber safeNumber = null;
         try {
             safeNumber = PhoneNumberFactory.createPhoneNumber(phoneNumber);
+            logger.log(Level.FINE, phoneNumber + " is not a valid phone number");
+
         } catch (InvalidPhoneNumberFormatException e) {
+
             e.printStackTrace();
         }
-        logger.log(Level.FINE, areaCode + centralOfficeCode + phoneLineCode + " is not a valid phone number");
         return safeNumber;
     }
 
