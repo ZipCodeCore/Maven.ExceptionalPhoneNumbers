@@ -6,11 +6,12 @@ import com.zipcodewilmington.exceptions.InvalidPhoneNumberFormatException;
  * Created by leon on 5/10/17.
  */
 public final class PhoneNumber {
+
     private final String phoneNumberString;
 
-    // default constructor is uncallable
+    // default constructor is un-callable
     private PhoneNumber() throws InvalidPhoneNumberFormatException {
-        this(null);
+        this(null); //why put null in here?
     }
 
     // non-default constructor is package-protected
