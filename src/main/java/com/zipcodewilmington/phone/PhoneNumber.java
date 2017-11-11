@@ -32,7 +32,7 @@ public final class PhoneNumber {
 
     public String getPhoneLineCode() {
         return toString().substring(10, 14);
-}
+    }
 
     @Override
     public String toString() {
