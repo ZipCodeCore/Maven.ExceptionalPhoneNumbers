@@ -23,6 +23,7 @@ public final class PhoneNumber {
     }
 
     public String getAreaCode() {
+
         return toString().substring(1, 4);
     }
 
