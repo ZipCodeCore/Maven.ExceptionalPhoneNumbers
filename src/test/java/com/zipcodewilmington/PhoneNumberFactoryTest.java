@@ -79,12 +79,10 @@ public class PhoneNumberFactoryTest {
 
     @Test
     public void testCreateRandomPhoneNumber() {
-        Logger.getGlobal().setLevel(Level.OFF);
-        // : Given
-        PhoneNumber[] phoneNumbers = PhoneNumberFactory.createRandomPhoneNumberArray(999);
-
-        // : When
-        for (PhoneNumber phoneNumber : phoneNumbers) {
+        for (int i = 0; i < 999; i++) {
+            // : Given
+            // : When
+            PhoneNumber phoneNumber = PhoneNumberFactory.createRandomPhoneNumber();
 
             // : Then
             Assert.assertTrue(phoneNumber != null);

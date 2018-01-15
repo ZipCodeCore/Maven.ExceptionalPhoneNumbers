@@ -26,7 +26,7 @@ public final class PhoneNumberFactory {
     /**
      * @return an instance of PhoneNumber with randomly generated phone number value
      */ //TODO - Implement logic
-    private static PhoneNumber createRandomPhoneNumber() {
+    public static PhoneNumber createRandomPhoneNumber() {
         return createPhoneNumberSafely(-1, -1, -1);
     }
 
