@@ -11,7 +11,7 @@ public abstract class RandomNumberFactory {
 
     /** @return a random float between the specified min and max numeric range */
     public static Float createFloat(float min, float max) {
-        return random.nextFloat() * (max - min) + min;
+        return random.nextFloat() * (max - min) + 1;
     }
 
     /** @return a random integer between the specified min and max numeric range */
