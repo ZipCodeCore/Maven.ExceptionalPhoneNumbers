@@ -45,7 +45,7 @@ public final class PhoneNumberFactory {
      */ //TODO - if input is valid, return respective PhoneNumber object, else return null
     public static PhoneNumber createPhoneNumberSafely(int areaCode, int centralOfficeCode, int phoneLineCode){
         try {
-            return new PhoneNumber("(" + areaCode + ")" + "-" +  centralOfficeCode + "-" + phoneLineCode);
+            return createPhoneNumber("(" + areaCode + ")" + "-" +  centralOfficeCode + "-" + phoneLineCode);
         } catch (InvalidPhoneNumberFormatException e){
             logger.warning(areaCode + "" + centralOfficeCode + "" + phoneLineCode +
                     " is not a valid phone number");
