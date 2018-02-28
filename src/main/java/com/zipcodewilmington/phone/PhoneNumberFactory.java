@@ -68,7 +68,20 @@ public final class PhoneNumberFactory {
      * @throws InvalidPhoneNumberFormatException - thrown if phoneNumberString does not match acceptable format
      */ // TODO - Add throws statement to method signature
     public static PhoneNumber createPhoneNumber (String phoneNumberString) throws InvalidPhoneNumberFormatException {
-        logger.log(Level.FINE, ("Attempting to create a new PhoneNumber object with a value of " + phoneNumberString));
-        return new PhoneNumber(phoneNumberString);
+        StringBuilder sb = new StringBuilder();
+        try {
+            sb.append("(");
+            sb.append(phoneNumberString.substring(0, 3));
+            sb.append(")-");
+            sb.append(phoneNumberString.substring(3, 6));
+            sb.append("-");
+            sb.append(phoneNumberString.substring(6));
+            return new PhoneNumber(sb.toString());
+        } catch (InvalidPhoneNumberFormatException e) {
+            logger.log(Level.FINE, ("Attempting to create a new PhoneNumber object with a value of " + phoneNumberString));
+            return null;
+        }
     }
 }
+
+// 012-345-6789

@@ -23,15 +23,15 @@ public class PhoneNumberFactoryTest {
     @Test
     public void testCreatePhoneNumberSafely() throws InvalidPhoneNumberFormatException {
         // : Given
-        int areaCode = 0;
-        int centralOfficeCode = 0;
-        int phoneLineCode = 0;
+        int areaCode = 302;
+        int centralOfficeCode = 228;
+        int phoneLineCode = 5151;
 
         // : When
         PhoneNumber phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
 
         // : Then
-        Assert.assertEquals(null, phoneNumber);
+        Assert.assertEquals("(302)-228-5151", phoneNumber.toString());
     }
 
     @Test
