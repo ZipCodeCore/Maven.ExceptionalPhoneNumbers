@@ -37,7 +37,7 @@ public final class PhoneNumberFactory {
 
         int areaCode = RandomNumberFactory.createInteger(100, 999);
         int centralOfficeCode = RandomNumberFactory.createInteger(100, 999);
-        int phoneLineCode = RandomNumberFactory.createInteger(100, 999);
+        int phoneLineCode = RandomNumberFactory.createInteger(1000, 9999);
 
         return createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
     }
