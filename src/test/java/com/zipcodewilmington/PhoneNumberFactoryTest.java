@@ -88,4 +88,14 @@ public class PhoneNumberFactoryTest {
             Assert.assertTrue(phoneNumber != null);
         }
     }
+//
+//    @Test
+//    public void createRandomPhoneNumberArray() {
+//        //Given
+//        PhoneNumber randomPhoneNumber = PhoneNumberFactory.createRandomPhoneNumber();
+//        PhoneNumber[] allPhoneNumbers = PhoneNumberFactory.;
+//
+//        //When
+//        //Then
+//    }
 }
