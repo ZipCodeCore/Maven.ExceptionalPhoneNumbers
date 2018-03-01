@@ -23,7 +23,7 @@ public final class PhoneNumberFactory {
     public static PhoneNumber[] createRandomPhoneNumberArray(int phoneNumberCount) {
         PhoneNumber[] phoneNumbersArray = new PhoneNumber[phoneNumberCount];
 
-        for(int i =0; i <phoneNumberCount; i++){
+        for(int i =0; i <phoneNumberCount-1; i++){
             phoneNumbersArray[i] = createRandomPhoneNumber();
         }
         return phoneNumbersArray;
@@ -35,9 +35,9 @@ public final class PhoneNumberFactory {
      */ //TODO - Implement logic
     public static PhoneNumber createRandomPhoneNumber() {
 
-        int areaCode = RandomNumberFactory.createInteger(111,999);
-        int centralOfficeCode = RandomNumberFactory.createInteger(111,999);
-        int phoneLineCode = RandomNumberFactory.createInteger(111,999);
+        int areaCode = RandomNumberFactory.createInteger(100,999);
+        int centralOfficeCode = RandomNumberFactory.createInteger(100,999);
+        int phoneLineCode = RandomNumberFactory.createInteger(10000,9999);
 
         return createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
     }
@@ -56,7 +56,7 @@ public final class PhoneNumberFactory {
         try {
             return createPhoneNumber(phoneNumberSafely.toString());
         } catch (InvalidPhoneNumberFormatException IPFE) {
-            logger.warning("(" + areaCode + ")" + "-" + centralOfficeCode + "-" + phoneLineCode + "this is not a valid number");
+            logger.warning("(" + areaCode + ")" + "-" + centralOfficeCode + "-" + phoneLineCode + " this is not a valid number");
             return null;
         }
     }
