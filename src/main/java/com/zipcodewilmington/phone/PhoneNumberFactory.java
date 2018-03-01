@@ -46,7 +46,7 @@ public final class PhoneNumberFactory {
      * @return a new phone number object
      */ //TODO - if input is valid, return respective PhoneNumber object, else return null
     public static PhoneNumber createPhoneNumberSafely(int areaCode, int centralOfficeCode, int phoneLineCode) {
-        String safePhoneNumberString = String.format("(%d)-%d-%d", areaCode,centralOfficeCode,phoneLineCode);
+        String safePhoneNumberString = String.format("(%3d)-%3d-%4d", areaCode,centralOfficeCode,phoneLineCode);
         try{
             return createPhoneNumber(safePhoneNumberString);
         } catch (InvalidPhoneNumberFormatException ipfe){
@@ -61,11 +61,7 @@ public final class PhoneNumberFactory {
      * @throws InvalidPhoneNumberFormatException - thrown if phoneNumberString does not match acceptable format
      */ // TODO - Add throws statement to method signature
     public static PhoneNumber createPhoneNumber(String phoneNumberString) throws InvalidPhoneNumberFormatException{
-           String stringRepresentation = "(215)555-5555";
-           PhoneNumber newPhoneNumber = new PhoneNumber(stringRepresentation);
-           String areaCode = newPhoneNumber.getAreaCode();
-           String centralOfficeCode = newPhoneNumber.getCentralOfficeCode();
-           String phoneLineCode = newPhoneNumber.getPhoneLineCode();
+           PhoneNumber newPhoneNumber = new PhoneNumber(phoneNumberString);
            logger.log(Level.SEVERE,"Attempting to create a phone number object with the value of newPhoneNumber");
            return newPhoneNumber;
     }
