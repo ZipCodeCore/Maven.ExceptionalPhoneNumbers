@@ -1,5 +1,6 @@
 package com.zipcodewilmington.phone;
 
+import com.sun.javafx.binding.StringFormatter;
 import com.zipcodewilmington.exceptions.InvalidPhoneNumberFormatException;
 import com.zipcodewilmington.tools.RandomNumberFactory;
 
@@ -34,11 +35,11 @@ public final class PhoneNumberFactory {
      */ //TODO - Implement logic
     public static PhoneNumber createRandomPhoneNumber() {
 
-       int areaCode =  RandomNumberFactory.createInteger(0, 999);
-       int centralOfficeCode = RandomNumberFactory.createInteger(0, 999);
-       int phoneline = RandomNumberFactory.createInteger(0, 9999);
+        int areaCode = RandomNumberFactory.createInteger(100, 999);
+        int centralOfficeCode = RandomNumberFactory.createInteger(100, 999);
+        int phoneLine = RandomNumberFactory.createInteger(1000, 9999);
 
-        return createPhoneNumberSafely(areaCode, centralOfficeCode, phoneline);
+        return createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLine);
     }
 
 
@@ -48,9 +49,19 @@ public final class PhoneNumberFactory {
      * @param phoneLineCode     - 4 digit code
      * @return a new phone number object
      */ //TODO - if input is valid, return respective PhoneNumber object, else return null
-    public static PhoneNumber createPhoneNumberSafely(int areaCode, int centralOfficeCode, int phoneLineCode)  {
+    public static PhoneNumber createPhoneNumberSafely(int areaCode, int centralOfficeCode, int phoneLineCode) {
+        //StringFormatter.format(%2)
+
         StringBuilder sb = new StringBuilder();
-        sb.append("(" + areaCode + ")" + "-" + centralOfficeCode + "-" + phoneLineCode);
+    //        sb.append("(");
+    //        sb.append(String.format("%02d", areaCode));
+    //        sb.append(")");
+    //        sb.append("-");
+    //        sb.append(String.format("%02d", centralOfficeCode));
+    //        sb.append("-");
+    //        sb.append(String.format("%03d", phoneLineCode));
+
+           sb.append("(" + areaCode + ")" + "-" + centralOfficeCode + "-" + phoneLineCode);
         String s = sb.toString();
         try {
             return createPhoneNumber(s);
