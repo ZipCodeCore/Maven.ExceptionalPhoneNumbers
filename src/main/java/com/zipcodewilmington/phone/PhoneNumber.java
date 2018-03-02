@@ -17,7 +17,7 @@ public final class PhoneNumber {
     protected PhoneNumber(String phoneNumber) throws InvalidPhoneNumberFormatException {
         //validate phone number with format `(###)-###-####`
         if (!phoneNumber.matches("\\(\\d{3}\\)-\\d{3}-\\d{4}")) {
-            throw new InvalidPhoneNumberFormatException();
+            throw new InvalidPhoneNumberFormatException("invalid phone number format");
         }
         this.phoneNumberString = phoneNumber;
     }
