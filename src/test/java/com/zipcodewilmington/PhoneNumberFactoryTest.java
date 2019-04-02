@@ -43,7 +43,7 @@ public class PhoneNumberFactoryTest {
 
         // : When
         PhoneNumber phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
-
+        System.out.println(phoneNumber.getAreaCode());
         // : Then
         Assert.assertEquals(phoneNumber.getAreaCode(), areaCode.toString());
     }
@@ -70,9 +70,9 @@ public class PhoneNumberFactoryTest {
         int centralOfficeCode = 312;
         Integer phoneLineCode = 5555;
 
+
         // : When
         PhoneNumber phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
-
         // : Then
         Assert.assertEquals(phoneNumber.getPhoneLineCode(), phoneLineCode.toString());
     }
