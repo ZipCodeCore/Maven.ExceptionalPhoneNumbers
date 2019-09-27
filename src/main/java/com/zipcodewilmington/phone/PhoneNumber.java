@@ -23,15 +23,27 @@ public final class PhoneNumber {
     }
 
     public String getAreaCode() {
-        return toString().substring(1, 4);
+        try {
+            return toString().substring(1, 4);
+        } catch (NullPointerException npe) {
+            return null;
+        }
     }
 
     public String getCentralOfficeCode() {
-        return toString().substring(6, 9);
+        try {
+            return toString().substring(6, 9);
+        } catch (NullPointerException npe) {
+            return null;
+        }
     }
 
     public String getPhoneLineCode() {
-        return toString().substring(10, 14);
+        try {
+            return toString().substring(10, 14);
+        } catch (NullPointerException npe) {
+            return null;
+        }
 }
 
     @Override

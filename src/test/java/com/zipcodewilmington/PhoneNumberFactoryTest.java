@@ -30,8 +30,12 @@ public class PhoneNumberFactoryTest {
         // : When
         PhoneNumber phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
 
+        //looks good to me...(###)-###-####
         // : Then
-        Assert.assertEquals(null, phoneNumber);
+
+
+        // I'm a doctor not an operator.
+        Assert.assertNotNull(phoneNumber);
     }
 
     @Test
