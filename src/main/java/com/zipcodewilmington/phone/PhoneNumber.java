@@ -23,10 +23,12 @@ public final class PhoneNumber {
     }
 
     public String getAreaCode() {
+
         return toString().substring(1, 4);
     }
 
     public String getCentralOfficeCode() {
+
         return toString().substring(6, 9);
     }
 
@@ -36,6 +38,7 @@ public final class PhoneNumber {
 
     @Override
     public String toString() {
+
         return phoneNumberString;
     }
 }
