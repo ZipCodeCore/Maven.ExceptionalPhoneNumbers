@@ -78,7 +78,7 @@ public class PhoneNumberFactoryTest {
     }
 
     @Test
-    public void testCreateRandomPhoneNumber() {
+    public void testCreateRandomPhoneNumber() throws InvalidPhoneNumberFormatException {
         for (int i = 0; i < 999; i++) {
             // : Given
             // : When
