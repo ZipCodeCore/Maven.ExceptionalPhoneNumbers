@@ -83,7 +83,7 @@ public class PhoneNumberFactoryTest {
             // : Given
             // : When
             PhoneNumber phoneNumber = PhoneNumberFactory.createRandomPhoneNumber();
-
+            
             // : Then
             Assert.assertTrue(phoneNumber != null);
         }
