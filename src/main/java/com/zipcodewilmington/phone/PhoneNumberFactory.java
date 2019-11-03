@@ -20,8 +20,18 @@ public final class PhoneNumberFactory {
      * @param phoneNumberCount - number of PhoneNumber objects to instantiate
      * @return array of randomly generated PhoneNumber objects
      */ //TODO - Implement logic
-    public static PhoneNumber[] createRandomPhoneNumberArray(int phoneNumberCount) {
-        return null;
+    public static PhoneNumber[] createRandomPhoneNumberArray (int phoneNumberCount) throws InvalidPhoneNumberFormatException{
+        PhoneNumber [] arrayOfPhoneNumbers = new PhoneNumber[phoneNumberCount];
+
+        for (int i = 0; i < phoneNumberCount; i++){
+            int areadCode = RandomNumberFactory.createInteger(100,999);
+            int centralOfficeCode = RandomNumberFactory.createInteger(100,999);
+            int phoneCOde = RandomNumberFactory.createInteger(1000,9999);
+
+            arrayOfPhoneNumbers[i] = createPhoneNumberSafely(areadCode,centralOfficeCode,phoneCOde);
+        }
+
+        return arrayOfPhoneNumbers;
     }
 
     /**

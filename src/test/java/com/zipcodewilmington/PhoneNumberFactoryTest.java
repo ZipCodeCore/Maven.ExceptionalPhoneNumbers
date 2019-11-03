@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -78,7 +79,7 @@ public class PhoneNumberFactoryTest {
     }
 
     @Test
-    public void testCreateRandomPhoneNumber() throws InvalidPhoneNumberFormatException {
+    public void testCreateRandomPhoneNumber() throws InvalidPhoneNumberFormatException  {
         for (int i = 0; i < 999; i++) {
             // : Given
             // : When
@@ -86,6 +87,20 @@ public class PhoneNumberFactoryTest {
 
             // : Then
             Assert.assertTrue(phoneNumber != null);
+        }
+    }
+
+    @Test
+    public void testCreateRandomPhoneNumberArray() throws InvalidPhoneNumberFormatException  {
+        for (int i = 0; i < 10; i++) {
+            // : Given
+            // : When
+            PhoneNumber [] phoneNumber = PhoneNumberFactory.createRandomPhoneNumberArray(5);
+
+            // : Then
+            Assert.assertTrue(phoneNumber != null);
+            String output = Arrays.toString(phoneNumber);
+            System.out.println(output);
         }
     }
 }
