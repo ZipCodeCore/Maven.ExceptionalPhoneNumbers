@@ -60,6 +60,7 @@ public final class PhoneNumberFactory {
         try {
             return  createPhoneNumber(newPhoneNumber);
         } catch (InvalidPhoneNumberFormatException e){
+            LOGGER.info(newPhoneNumber + " is not a valid phone number");
             return null;
         }
 
