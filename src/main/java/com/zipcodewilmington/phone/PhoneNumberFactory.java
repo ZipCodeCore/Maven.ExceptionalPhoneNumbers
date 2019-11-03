@@ -1,6 +1,7 @@
 package com.zipcodewilmington.phone;
 
 import com.zipcodewilmington.exceptions.InvalidPhoneNumberFormatException;
+import com.zipcodewilmington.tools.RandomNumberFactory;
 
 import java.util.logging.Logger;
 
@@ -27,7 +28,11 @@ public final class PhoneNumberFactory {
      * @return an instance of PhoneNumber with randomly generated phone number value
      */ //TODO - Implement logic
     public static PhoneNumber createRandomPhoneNumber() throws InvalidPhoneNumberFormatException {
-        return createPhoneNumberSafely(-1, -1, -1);
+        int areaCode = RandomNumberFactory.createInteger(100,999);
+        int centralOfficeCode = RandomNumberFactory.createInteger(100,999);
+        int phoneCode = RandomNumberFactory.createInteger(1000,9999);
+
+        return createPhoneNumberSafely(areaCode, centralOfficeCode, phoneCode);
     }
 
 
@@ -58,7 +63,7 @@ public final class PhoneNumberFactory {
     public static PhoneNumber createPhoneNumber(String phoneNumberString) throws InvalidPhoneNumberFormatException {
 
         PhoneNumber newPhoneNumber = new PhoneNumber(phoneNumberString);
-
         return newPhoneNumber;
+
     }
 }
