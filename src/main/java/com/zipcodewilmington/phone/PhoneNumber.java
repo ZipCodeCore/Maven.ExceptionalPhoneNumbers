@@ -22,9 +22,7 @@ public final class PhoneNumber {
         this.phoneNumberString = phoneNumber;
     }
 
-    public String getAreaCode() {
-        return toString().substring(1, 4);
-    }
+    public String getAreaCode() { return toString().substring(1, 4); }
 
     public String getCentralOfficeCode() {
         return toString().substring(6, 9);
