@@ -9,7 +9,7 @@ import java.util.logging.Logger;
  * Created by leon on 5/1/17.
  */
 public final class PhoneNumberFactory {
-    private static final Logger logger = Logger.getGlobal();
+    private static final Logger LOGGER = Logger.getLogger("com.zipcodewilmington.phone");
 
     private PhoneNumberFactory() {
         /** This constructor is private
@@ -71,7 +71,7 @@ public final class PhoneNumberFactory {
      * @throws InvalidPhoneNumberFormatException - thrown if phoneNumberString does not match acceptable format
      */ // TODO - Add throws statement to method signature
     public static PhoneNumber createPhoneNumber(String phoneNumberString) throws InvalidPhoneNumberFormatException {
-
+        LOGGER.info("Attempting to create a new PhoneNumber object with a value of " + phoneNumberString);
         PhoneNumber newPhoneNumber = new PhoneNumber(phoneNumberString);
         return newPhoneNumber;
 
