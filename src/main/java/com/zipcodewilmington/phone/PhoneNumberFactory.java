@@ -20,7 +20,10 @@ public final class PhoneNumberFactory {
      * @return array of randomly generated PhoneNumber objects
      */ //TODO - Implement logic
     public static PhoneNumber[] createRandomPhoneNumberArray(int phoneNumberCount) {
-        return null;
+        PhoneNumber[] phoneNumberArray = new PhoneNumber[phoneNumberCount];
+        for(Integer i = 0; i < phoneNumberCount; i++)
+            phoneNumberArray[i] = createRandomPhoneNumber();
+        return phoneNumberArray;
     }
 
     /**
