@@ -3,6 +3,7 @@ package com.zipcodewilmington;
 import com.zipcodewilmington.exceptions.InvalidPhoneNumberFormatException;
 import com.zipcodewilmington.phone.PhoneNumber;
 import com.zipcodewilmington.phone.PhoneNumberFactory;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -82,7 +83,12 @@ public class PhoneNumberFactoryTest {
         for (int i = 0; i < 999; i++) {
             // : Given
             // : When
-            PhoneNumber phoneNumber = PhoneNumberFactory.createRandomPhoneNumber();
+            PhoneNumber phoneNumber = null;
+            try {
+                phoneNumber = PhoneNumberFactory.createRandomPhoneNumber();
+            } catch (InvalidPhoneNumberFormatException e) {
+                e.printStackTrace();
+            }
 
             // : Then
             Assert.assertTrue(phoneNumber != null);
